@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Task Management App</title>
+</head>
+<body>
+    <h1>Task App</h1>
+    <button class="button" id="openButton">Add Task</button>
+    
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <!-- <h2>Input Form</h2> -->
+            <form id="modalForm">
+                <!-- task id -->
+                <label for="parentTaskId">Task Id:</label>
+                <input type="number" id="parentTaskId" required>
+                <div id="parentTaskIdError" class="error-message"></div>
+
+                <!-- task name -->
+                <label for="parentTaskName">Task Name:</label>
+                <input type="text" id="parentTaskName" required>
+
+                <!-- task start time -->
+                <label for="parentTaskStartDate">Start Date:</label>
+                <input type="datetime-local" id="parentTaskStartDate" required>
+
+                <!-- task end date -->
+                <label for="parentTaskEndDate">End Date:</label>
+                <input type="datetime-local" id="parentTaskEndDate" required>
+                <div id="parentTaskIdError" class="error-message"></div>
+
+                <!-- task status -->
+                <label for="parentTaskStatus">Status:</label>
+                <select id="parentTaskStatus">
+                    <option value="In-Progress">In-Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="DuePassed">DuePassed</option>
+                    <option value="Canceled">Canceled</option>
+                </select>
+                <!-- <button>Add sub task</button> -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="taskCard"></div>
+    <script src="index.js"></script>
+</body>
+</html>
